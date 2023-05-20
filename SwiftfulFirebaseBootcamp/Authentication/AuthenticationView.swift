@@ -12,16 +12,27 @@ import GoogleSignInSwift
 
 @MainActor
 final class AuthenticationViewModel: ObservableObject {
+        
+    let signInAppleHelper = SignInAppleHelper()
+    
     
     func signInGoogle() async throws {
-
         let helper = SignInGoogleHelper()
         let tokens = try await helper.signIn()
-        
         try await AuthenicationManager.shared.signInWithGoogle(tokens: tokens)
     }  // signInGoogle
 
-}
+    func signInApple() async throws {
+        let helper = SignInAppleHelper()
+        let tokens = try await helper.startSignInWithAppleFlow()
+        try await AuthenicationManager.shared.signInWithApple(tokens: tokens)
+    }  // signInApple
+    
+}  // class AuthenticationViewModel
+
+
+
+
 
 
 struct AuthenticationView: View {
@@ -53,7 +64,29 @@ struct AuthenticationView: View {
                         print("ERROR: \(error.localizedDescription)")
                     }  // do...catch
                 }  // Task
-            }
+            }  // GoogleSignInButton
+            
+            
+//            SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
+//                .allowsHitTesting(false)
+//                .frame(height: 55)
+            
+            Button {
+                Task {
+                    do {
+                        try await viewModel.signInApple()
+                        showSignInView = false
+                    } catch {
+                        print("ERROR: \(error.localizedDescription)")
+                    }  // do...catch
+                }  // Task
+            } label: {
+                SignInWithAppleButtonViewRepresentable(type: .default, style: .black)
+                    .allowsHitTesting(false)
+                    .frame(height: 55)
+                    
+            }  // Button
+
             
             Spacer()
             

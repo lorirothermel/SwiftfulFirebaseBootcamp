@@ -23,6 +23,7 @@
 		DF508CDA2A16C9E000C714AC /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF508CD92A16C9E000C714AC /* GoogleSignInSwift */; };
 		DF508CDD2A16CF2200C714AC /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF508CDC2A16CF2200C714AC /* Utilities.swift */; };
 		DF508CDF2A185A8400C714AC /* SignInGoogleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF508CDE2A185A8400C714AC /* SignInGoogleHelper.swift */; };
+		DF508CE22A1957B100C714AC /* SignInAppleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF508CE12A1957B100C714AC /* SignInAppleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DF508CDC2A16CF2200C714AC /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		DF508CDE2A185A8400C714AC /* SignInGoogleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInGoogleHelper.swift; sourceTree = "<group>"; };
 		DF508CE02A193CBD00C714AC /* SwiftfulFirebaseBootcamp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftfulFirebaseBootcamp.entitlements; sourceTree = "<group>"; };
+		DF508CE12A1957B100C714AC /* SignInAppleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAppleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				DF508CD02A14C84A00C714AC /* RootView.swift */,
 				DF508CD22A14CD7000C714AC /* SettingsView.swift */,
 				DF508CDE2A185A8400C714AC /* SignInGoogleHelper.swift */,
+				DF508CE12A1957B100C714AC /* SignInAppleHelper.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				DF508CD32A14CD7000C714AC /* SettingsView.swift in Sources */,
 				DF508CCD2A14B4B200C714AC /* SignInEmailView.swift in Sources */,
 				DF508CD12A14C84A00C714AC /* RootView.swift in Sources */,
+				DF508CE22A1957B100C714AC /* SignInAppleHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
